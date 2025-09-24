@@ -488,6 +488,8 @@ GameObject:
   - component: {fileID: 2041004994}
   - component: {fileID: 2041004995}
   - component: {fileID: 2041004996}
+  - component: {fileID: 2041004997}
+  - component: {fileID: 2041004998}
   m_Layer: 0
   m_Name: Mushroom
   m_TagString: Untagged
@@ -617,6 +619,8 @@ MonoBehaviour:
   - rid: 4120207024836837768
   - rid: 4120207024836837797
   - rid: 4120207047501807686
+  - rid: 4120207070032036262
+  - rid: 4120207070032036504
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
@@ -654,6 +658,22 @@ MonoBehaviour:
           m_Value1: 1475964533454641521
         Name: TargetLocation
         m_Value: {x: 0, y: 0, z: 0}
+    - rid: 4120207070032036262
+      type: {class: 'BlackboardVariable`1[[ActionBehaviour, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 5282659117921662240
+          m_Value1: 7801178494696705972
+        Name: Attack1
+        m_Value: {fileID: 2041004997}
+    - rid: 4120207070032036504
+      type: {class: 'BlackboardVariable`1[[ActionBehaviour, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 8270566034985584320
+          m_Value1: 781440167205220491
+        Name: Attack2
+        m_Value: {fileID: 2041004998}
 --- !u!50 &2041004996
 Rigidbody2D:
   serializedVersion: 5
@@ -681,6 +701,38 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2041004997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041004990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b21ab40e68bc644c9b86439b2e61b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPatternEnd: 0
+  waitTimeForCharging: 1
+  projectilePrefab: {fileID: 7973321865426680566, guid: cf4bc1f183d41934ba0a02827856189f, type: 3}
+  projectileRange: 180
+  loopCount: 2
+  RightAngle: -60
+  LeftAngle: 120
+--- !u!114 &2041004998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041004990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47fd02a6d51296849b479a6ed0397300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPatternEnd: 0
 --- !u!1 &2045340725
 GameObject:
   m_ObjectHideFlags: 0
