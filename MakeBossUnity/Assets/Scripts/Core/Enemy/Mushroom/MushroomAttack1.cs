@@ -2,10 +2,11 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class MushroomAttack1 : ActionBehaviour
+public class MushroomAttack1 : ActionBehavior
 {
     Transform target;
     Animator animator;
+    SpriteRenderer spriteRenderer;
 
     [SerializeField] float waitTimeForCharging = 1f; // 차징시간
     [SerializeField] GameObject projectilePrefab;    // 투사체
@@ -16,20 +17,37 @@ public class MushroomAttack1 : ActionBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
     public override void OnEnd()
     {
-   
+        IsPatternEnd = false;
     }
 
     public override void OnStart()
-    {   
-        StartCoroutine(ChargingPattern());       
+    {
+        IsPatternEnd = false;
+        StartCoroutine(ChargingPattern());
     }
 
     public override void OnUpdata()
     {
-      
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+        if (transform.position.x < player.transform.position.x)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else
+        {
+            spriteRenderer.flipX = false;
+        }
+    }
+
+    public override void OnStop()
+    {
+        StopCoroutine(ChargingPattern());
+        base.OnStop();
     }
 
     IEnumerator ChargingPattern()
@@ -55,7 +73,7 @@ public class MushroomAttack1 : ActionBehaviour
 
         float deltaAngle = projectileRange / 10;
 
-        for(int i = 0; i < 10; i++)
+        for (int i = 0; i < 10; i++)
         {
             GameObject projectileInstance = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
 
@@ -86,6 +104,6 @@ public class MushroomAttack1 : ActionBehaviour
         {
             return LeftAngle;
         }
-   
+
     }
 }

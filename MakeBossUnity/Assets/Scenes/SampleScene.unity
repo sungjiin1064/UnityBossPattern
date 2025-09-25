@@ -247,7 +247,7 @@ Transform:
   m_GameObject: {fileID: 313213531}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0611, y: -3.77, z: 0}
+  m_LocalPosition: {x: -0.01, y: -3.77, z: 0}
   m_LocalScale: {x: 17.8178, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -619,8 +619,9 @@ MonoBehaviour:
   - rid: 4120207024836837768
   - rid: 4120207024836837797
   - rid: 4120207047501807686
-  - rid: 4120207070032036262
-  - rid: 4120207070032036504
+  - rid: 4120207092819689688
+  - rid: 4120207092819689858
+  - rid: 4120207092819690045
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
@@ -658,20 +659,29 @@ MonoBehaviour:
           m_Value1: 1475964533454641521
         Name: TargetLocation
         m_Value: {x: 0, y: 0, z: 0}
-    - rid: 4120207070032036262
-      type: {class: 'BlackboardVariable`1[[ActionBehaviour, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+    - rid: 4120207092819689688
+      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
-          m_Value0: 5282659117921662240
-          m_Value1: 7801178494696705972
+          m_Value0: 6669125002984119159
+          m_Value1: 9275619472003197263
+        Name: StopActions
+        m_Value:
+        - {fileID: 2041004990}
+    - rid: 4120207092819689858
+      type: {class: 'BlackboardVariable`1[[ActionBehavior, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 10913443311602762718
+          m_Value1: 10367442891251282509
         Name: Attack1
         m_Value: {fileID: 2041004997}
-    - rid: 4120207070032036504
-      type: {class: 'BlackboardVariable`1[[ActionBehaviour, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+    - rid: 4120207092819690045
+      type: {class: 'BlackboardVariable`1[[ActionBehavior, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
-          m_Value0: 8270566034985584320
-          m_Value1: 781440167205220491
+          m_Value0: 2210584073175524703
+          m_Value1: 15837317610185301321
         Name: Attack2
         m_Value: {fileID: 2041004998}
 --- !u!50 &2041004996

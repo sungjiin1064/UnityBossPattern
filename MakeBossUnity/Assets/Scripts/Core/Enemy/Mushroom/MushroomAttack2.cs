@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MushroomAttack2 : ActionBehaviour
+public class MushroomAttack2 : ActionBehavior
 {
     public override void OnEnd()
     {
@@ -16,5 +16,9 @@ public class MushroomAttack2 : ActionBehaviour
     public override void OnUpdata()
     {
 
+    }
+    public override void OnStop()
+    {
+       base.OnStop();
     }
 }
