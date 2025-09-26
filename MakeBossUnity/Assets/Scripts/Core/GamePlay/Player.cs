@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    Controls controls;
+    public Controls controls;
     Rigidbody2D rd;
 
     [Header("มกวม")]
@@ -13,7 +13,10 @@ public class Player : MonoBehaviour
     [SerializeField] private float jumpPower = 10f;
     [SerializeField] private float groundDistance = 1f;
 
-    
+    public Action<bool> OnFire;
+
+    public Action<bool> newOnFire;
+
     private void Awake()
     {
         rd = GetComponent<Rigidbody2D>();
@@ -25,12 +28,26 @@ public class Player : MonoBehaviour
         controls.Player.Enable();
 
         controls.Player.Jump.performed += HandleJump;
+        controls.Player.Fire.performed += OnFirePerformed;
+        controls.Player.Fire.performed += OnFireCancled;
     }
 
     private void OnDisable()
     {
         controls.Player.Jump.performed -= HandleJump;
+        controls.Player.Fire.performed -= OnFirePerformed;
+        controls.Player.Fire.performed -= OnFireCancled;
         controls.Player.Disable();
+    }
+
+    private void OnFirePerformed(InputAction.CallbackContext context)
+    {
+        newOnFire?.Invoke(true);   
+    }
+
+    private void OnFireCancled(InputAction.CallbackContext context)
+    {
+        newOnFire?.Invoke(false);
     }
 
     private void Update()

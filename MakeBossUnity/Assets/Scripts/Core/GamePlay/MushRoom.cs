@@ -1,3 +1,4 @@
+using System;
 using Unity.Behavior;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -22,6 +23,8 @@ public class MushRoom : MonoBehaviour, IDamagable
     private void Start()
     {
         behaviorAgent.SetVariableValue<EnemyState>("EnemyState", stateState);
+        behaviorAgent.SetVariableValue<Boolean>("IsPatternTrigger", true);
+
         CurrentHealth = MaxHealth;
     }
 
