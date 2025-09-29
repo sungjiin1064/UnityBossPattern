@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
     public Controls controls;
     Rigidbody2D rd;
+    SpriteRenderer spr;      ////////////////////////////////////////////////////////////////////////
+    Animator amt;           ////////////////////////////////////////////////////////////////////////
 
     [Header("มกวม")]
     [SerializeField]LayerMask groundMask;
@@ -15,11 +17,11 @@ public class Player : MonoBehaviour
 
     public Action<bool> OnFire;
 
-    public Action<bool> newOnFire;
-
     private void Awake()
     {
         rd = GetComponent<Rigidbody2D>();
+        spr = GetComponent<SpriteRenderer>(); ////////////////////////////////
+        amt = GetComponent<Animator>();      ////////////////////////////////
     }
 
     private void OnEnable()
@@ -27,27 +29,29 @@ public class Player : MonoBehaviour
         controls = new Controls();
         controls.Player.Enable();
 
-        controls.Player.Jump.performed += HandleJump;
+        controls.Player.Jump.performed += HandleJump;   
         controls.Player.Fire.performed += OnFirePerformed;
-        controls.Player.Fire.performed += OnFireCancled;
+        controls.Player.Fire.canceled += OnFireCancled;
     }
 
     private void OnDisable()
     {
         controls.Player.Jump.performed -= HandleJump;
         controls.Player.Fire.performed -= OnFirePerformed;
-        controls.Player.Fire.performed -= OnFireCancled;
+        controls.Player.Fire.canceled -= OnFireCancled;
         controls.Player.Disable();
     }
 
     private void OnFirePerformed(InputAction.CallbackContext context)
     {
-        newOnFire?.Invoke(true);   
+        OnFire?.Invoke(true);
+        amt.SetTrigger("Fire");   //////////////////////////////////////////////
     }
 
     private void OnFireCancled(InputAction.CallbackContext context)
     {
-        newOnFire?.Invoke(false);
+        OnFire?.Invoke(false);
+        
     }
 
     private void Update()
@@ -60,6 +64,8 @@ public class Player : MonoBehaviour
         float dir = controls.Player.Move.ReadValue<float>();
         rd.linearVelocity = new Vector2(dir * moveSpeed, rd.linearVelocityY);
 
+        if(dir <0) spr.flipX = true;         ////////////////////////////////////////
+        else if(dir > 0) spr.flipX = false;  ////////////////////////////////////////
     }
 
     private void HandleJump(InputAction.CallbackContext context)

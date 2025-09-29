@@ -16,17 +16,17 @@ public class PlayerFire : MonoBehaviour
 
     private void Awake()
     {
-        player = gameObject.GetComponent<Player>();
+        player = GetComponent<Player>();
     }
 
     private void OnEnable()
     {
-        player.newOnFire += HandleFire;
+        player.OnFire += HandleFire;
     }
 
     private void OnDisable()
     {
-        player.newOnFire -= HandleFire;        
+        player.OnFire -= HandleFire;        
     }
 
     private void HandleFire(bool enable)

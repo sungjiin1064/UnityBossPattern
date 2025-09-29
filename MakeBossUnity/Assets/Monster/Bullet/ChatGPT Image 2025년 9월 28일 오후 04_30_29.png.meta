@@ -1,28 +1,16 @@
 fileFormatVersion: 2
-guid: 1ea10f5905ee895489e3b2e0c1bb1992
+guid: 76f9c85588d169e4abceb363dfb6cf75
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -654737500350741434
-    second: Mushroom-Idle_0
+      213: -9086458755962035444
+    second: "ChatGPT Image 2025\uB144 9\uC6D4 28\uC77C \uC624\uD6C4 04_30_29_0"
   - first:
-      213: -7095357931098475539
-    second: Mushroom-Idle_1
+      213: 2038961000498315928
+    second: "ChatGPT Image 2025\uB144 9\uC6D4 28\uC77C \uC624\uD6C4 04_30_29_1"
   - first:
-      213: 2163288782968092727
-    second: Mushroom-Idle_2
-  - first:
-      213: -4210055123308685074
-    second: Mushroom-Idle_3
-  - first:
-      213: -9004658040723243172
-    second: Mushroom-Idle_4
-  - first:
-      213: 920352064709726215
-    second: Mushroom-Idle_5
-  - first:
-      213: -8565668554048287875
-    second: Mushroom-Idle_6
+      213: -787436426217156428
+    second: "ChatGPT Image 2025\uB144 9\uC6D4 28\uC77C \uC624\uD6C4 04_30_29_2"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -118,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mushroom-Idle_0
+      name: "ChatGPT Image 2025\uB144 9\uC6D4 28\uC77C \uC624\uD6C4 04_30_29_0"
       rect:
         serializedVersion: 2
-        x: 24
-        y: 0
-        width: 32
-        height: 34
+        x: 13
+        y: 88
+        width: 986
+        height: 646
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 644877e56b7e9e6f0800000000000000
-      internalID: -654737500350741434
+      spriteID: c0325a057e966e180800000000000000
+      internalID: -9086458755962035444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mushroom-Idle_1
+      name: "ChatGPT Image 2025\uB144 9\uC6D4 28\uC77C \uC624\uD6C4 04_30_29_1"
       rect:
         serializedVersion: 2
-        x: 104
-        y: 0
-        width: 32
-        height: 33
+        x: 47
+        y: 712
+        width: 8
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: de3ff92fd89388d90800000000000000
-      internalID: -7095357931098475539
+      spriteID: 892c3912a38db4c10800000000000000
+      internalID: 2038961000498315928
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mushroom-Idle_2
+      name: "ChatGPT Image 2025\uB144 9\uC6D4 28\uC77C \uC624\uD6C4 04_30_29_2"
       rect:
         serializedVersion: 2
-        x: 184
-        y: 0
-        width: 32
-        height: 32
+        x: 593
+        y: 341
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,96 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 738766fbfab850e10800000000000000
-      internalID: 2163288782968092727
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mushroom-Idle_3
-      rect:
-        serializedVersion: 2
-        x: 264
-        y: 0
-        width: 32
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ee85f52db21e295c0800000000000000
-      internalID: -4210055123308685074
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mushroom-Idle_4
-      rect:
-        serializedVersion: 2
-        x: 344
-        y: 0
-        width: 32
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c5f73de7837090380800000000000000
-      internalID: -9004658040723243172
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mushroom-Idle_5
-      rect:
-        serializedVersion: 2
-        x: 424
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 700125d935fb5cc00800000000000000
-      internalID: 920352064709726215
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mushroom-Idle_6
-      rect:
-        serializedVersion: 2
-        x: 504
-        y: 0
-        width: 32
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d7bc73c35d1a02980800000000000000
-      internalID: -8565668554048287875
+      spriteID: 4b09f1c0eb67215f0800000000000000
+      internalID: -787436426217156428
       vertices: []
       indices: 
       edges: []
@@ -285,13 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Mushroom-Idle_0: -654737500350741434
-      Mushroom-Idle_1: -7095357931098475539
-      Mushroom-Idle_2: 2163288782968092727
-      Mushroom-Idle_3: -4210055123308685074
-      Mushroom-Idle_4: -9004658040723243172
-      Mushroom-Idle_5: 920352064709726215
-      Mushroom-Idle_6: -8565668554048287875
+      "ChatGPT Image 2025\uB144 9\uC6D4 28\uC77C \uC624\uD6C4 04_30_29_0": -9086458755962035444
+      "ChatGPT Image 2025\uB144 9\uC6D4 28\uC77C \uC624\uD6C4 04_30_29_1": 2038961000498315928
+      "ChatGPT Image 2025\uB144 9\uC6D4 28\uC77C \uC624\uD6C4 04_30_29_2": -787436426217156428
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

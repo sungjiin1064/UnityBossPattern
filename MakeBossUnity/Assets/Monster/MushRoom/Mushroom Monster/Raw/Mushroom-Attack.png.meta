@@ -130,12 +130,12 @@ TextureImporter:
       name: Mushroom-Attack_0
       rect:
         serializedVersion: 2
-        x: 25
+        x: 0
         y: 0
-        width: 30
-        height: 32
+        width: 80
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -152,12 +152,12 @@ TextureImporter:
       name: Mushroom-Attack_1
       rect:
         serializedVersion: 2
-        x: 116
+        x: 80
         y: 0
-        width: 29
-        height: 31
+        width: 80
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -174,12 +174,12 @@ TextureImporter:
       name: Mushroom-Attack_2
       rect:
         serializedVersion: 2
-        x: 200
+        x: 160
         y: 0
-        width: 34
-        height: 27
+        width: 80
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -196,12 +196,12 @@ TextureImporter:
       name: Mushroom-Attack_3
       rect:
         serializedVersion: 2
-        x: 280
+        x: 240
         y: 0
-        width: 34
-        height: 26
+        width: 80
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -218,12 +218,12 @@ TextureImporter:
       name: Mushroom-Attack_4
       rect:
         serializedVersion: 2
-        x: 340
-        y: 2
-        width: 28
-        height: 31
+        x: 320
+        y: 0
+        width: 80
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -240,12 +240,12 @@ TextureImporter:
       name: Mushroom-Attack_5
       rect:
         serializedVersion: 2
-        x: 405
+        x: 400
         y: 0
-        width: 32
-        height: 17
+        width: 80
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -262,12 +262,12 @@ TextureImporter:
       name: Mushroom-Attack_6
       rect:
         serializedVersion: 2
-        x: 484
+        x: 480
         y: 0
-        width: 32
-        height: 19
+        width: 80
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -284,12 +284,12 @@ TextureImporter:
       name: Mushroom-Attack_7
       rect:
         serializedVersion: 2
-        x: 563
+        x: 560
         y: 0
-        width: 32
-        height: 22
+        width: 80
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -306,12 +306,12 @@ TextureImporter:
       name: Mushroom-Attack_8
       rect:
         serializedVersion: 2
-        x: 654
-        y: 3
-        width: 31
-        height: 30
+        x: 640
+        y: 0
+        width: 80
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -328,12 +328,12 @@ TextureImporter:
       name: Mushroom-Attack_9
       rect:
         serializedVersion: 2
-        x: 745
+        x: 720
         y: 0
-        width: 30
-        height: 28
+        width: 80
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -342,6 +342,72 @@ TextureImporter:
       bones: []
       spriteID: a0b8302e868c584f0800000000000000
       internalID: -827034603758580982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mushroom-Attack_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 800
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa81f2b46a93314cae57df9f63c48e4
+      internalID: 1608988850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mushroom-Attack_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 796
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b647e3be72d556848a90127fc7a3d188
+      internalID: 1622124540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mushroom-Attack_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 800
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b371f99f4a8d9b478f5a62b349e616b
+      internalID: 79504907
       vertices: []
       indices: 
       edges: []
@@ -362,6 +428,9 @@ TextureImporter:
     nameFileIdTable:
       Mushroom-Attack_0: 5827293808285669160
       Mushroom-Attack_1: 395788944090898754
+      Mushroom-Attack_10: 1608988850
+      Mushroom-Attack_11: 1622124540
+      Mushroom-Attack_12: 79504907
       Mushroom-Attack_2: -2431859481363569845
       Mushroom-Attack_3: 3975243271130314681
       Mushroom-Attack_4: -2976413451591195025
