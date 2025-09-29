@@ -13,7 +13,11 @@ public class MushRoom : MonoBehaviour, IDamagable
     [SerializeField] int MaxHealth = 100;
     [field:SerializeField] public int CurrentHealth {  get; private set; }
 
+    public Action<bool> OnPatternStart;
+    public Action<string,bool> OnSomeFuncStart;
+    public Action<int, int> OnHealthbarUpdate;
 
+    [SerializeField] ParticleSystem rageVFX;
 
     private void Awake()
     {
@@ -22,15 +26,53 @@ public class MushRoom : MonoBehaviour, IDamagable
 
     private void Start()
     {
-        behaviorAgent.SetVariableValue<EnemyState>("EnemyState", stateState);
-        behaviorAgent.SetVariableValue<Boolean>("IsPatternTrigger", true);
+        behaviorAgent.SetVariableValue<EnemyState>("EnemyState", stateState);        
 
         CurrentHealth = MaxHealth;
+
+        OnHealthbarUpdate?.Invoke(CurrentHealth, MaxHealth);
     }
+
+    private void OnEnable()
+    {
+        OnPatternStart += HandlePatternStart;
+        OnSomeFuncStart += HandleSomeFuncStart;
+    }
+
+    private void OnDisable()
+    {
+        OnPatternStart -= HandlePatternStart;
+        OnSomeFuncStart -= HandleSomeFuncStart;
+        
+    }
+
+    private void HandlePatternStart(bool enable)
+    {
+        Debug.Log("HandlePatternStart 함수 실행!");
+        behaviorAgent.SetVariableValue<Boolean>("IsPatternTrigger", enable);
+
+        if(rageVFX.isPlaying) return;
+        rageVFX.Play();
+    }
+
+    private void HandleSomeFuncStart(string methodName, bool enable)
+    {
+        Debug.Log("HandleSomeFuncStart 함수 실행!");
+        behaviorAgent.SetVariableValue<Boolean>(methodName, enable);
+    }
+      
 
     public void TakeDamage(int damage)
     {
         CurrentHealth -= damage;
+
+        OnHealthbarUpdate?.Invoke(CurrentHealth, MaxHealth);
+
+        if (CurrentHealth < MaxHealth * 0.5f)
+        {
+            OnPatternStart?.Invoke(true);
+            //OnSomeFuncStart?.Invoke("IsPatternTrigger", true);
+        }
 
         if(IsStun())
         {
