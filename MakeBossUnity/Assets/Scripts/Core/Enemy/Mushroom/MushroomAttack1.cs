@@ -14,10 +14,16 @@ public class MushroomAttack1 : ActionBehavior
     [SerializeField] int loopCount = 2;              // 패턴의 반복 횟수
     [SerializeField] float RightAngle = -60f;
     [SerializeField] float LeftAngle = 120f;
+
+    //[SerializeField] AudioClip fireSFX;
+    AudioSource audiosource;
+
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audiosource = GetComponent<AudioSource>();
     }
     public override void OnEnd()
     {
@@ -26,6 +32,7 @@ public class MushroomAttack1 : ActionBehavior
 
     public override void OnStart()
     {
+        Debug.Log("버섯 공격1 실행");
         IsPatternEnd = false;
         StartCoroutine(ChargingPattern());
     }
@@ -58,6 +65,8 @@ public class MushroomAttack1 : ActionBehavior
         for (int i = 0; i < loopCount; i++)
         {
             Fire();
+            audiosource.clip = Resources.Load<AudioClip>("Sound/Ice");
+            audiosource.Play();
             yield return new WaitForSeconds(1f);
         }
 

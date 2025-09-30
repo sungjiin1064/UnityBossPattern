@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDamagable
 {
     public Controls controls;
     Rigidbody2D rd;
@@ -16,12 +16,16 @@ public class Player : MonoBehaviour
     [SerializeField] private float groundDistance = 1f;
 
     public Action<bool> OnFire;
+    AudioSource audiosource;
+
+    [field:SerializeField] public int CurrentHealth { get; set; }
 
     private void Awake()
     {
         rd = GetComponent<Rigidbody2D>();
         spr = GetComponent<SpriteRenderer>(); ////////////////////////////////
         amt = GetComponent<Animator>();      ////////////////////////////////
+        audiosource = GetComponent<AudioSource>();
     }
 
     private void OnEnable()
@@ -72,6 +76,8 @@ public class Player : MonoBehaviour
     {
         if(ISGround())
         {
+            audiosource.clip = Resources.Load<AudioClip>("Sound/Jump");
+            audiosource.Play();
             rd.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
         } 
     }
@@ -86,5 +92,10 @@ public class Player : MonoBehaviour
         Gizmos.color = Color.red;
 
         Gizmos.DrawLine(transform.position, transform.position + (Vector3)(Vector2.down * groundDistance));
+    }
+
+    public void TakeDamage(int damage)
+    {
+        CurrentHealth -= damage;
     }
 }
